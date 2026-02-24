@@ -1,0 +1,128 @@
+<!-- What is events
+    it is an action that happens in the brower EX. clicking button ,moving mouse, pressing key, submmiting form, loading a page,etc
+    JS detecs these events and respond to them
+    => Types of events
+    1.Mouse events: click, dblclick, mouseover, mouseout, mousedown, mouseup
+    2.Keyboard events: keydown, keyup, keypress 
+    3.Browser events: load, unload, resize, scroll
+
+    html should contain structure and JS is 
+
+    => Assigments
+    1. use of Jquery
+    2. time, timestamp, default, preventDefault, stopPropagation, sourceelement, target, currentTarget, event bubbling, event capturing, clientX, clientY, pageX, pageY, screenX, screenY, offsetX, offsetY, altKey, ctrlKey, shiftKey, metaKey, which, charCode, keyCode
+
+    addeventlistener(event, function, useCapture) is a JS method that allows you to attach an event handler to a html element so that specific func. runs when event occurs. It takes three parameters:
+
+    => Activity
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                alt="Photoshop Logo">
+        </li>
+
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                alt="Mount Fuji" onclick="alert('hi')">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger">
+        </li>
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+  </body>
+  <script>
+    document.getElementById('tiger').onclick = function() {
+        alert('You clicked the tiger image!');  // select element -> asign func. to click event -> when click func. runs
+    };
+    
+    document.getElementById('tiger').addEventListener('click', function(e){
+        console.log(e);
+    })
+    
+    document.getElementById('tiger').onclick = function() {
+        alert('You clicked the tiger image!');  // select element -> asign func. to click event -> when click func. runs
+    };
+    document.getElementById('photoman').addEventListener('click', function(){
+    console.log("Clicking inside the ul");
+    })
+    // event propagation - event bubbling and event capturing
+    // 1. event bubbling: when an event occurs on an element, it first runs the handlers on that element, then on its parent, then all the way up to the root of the document. (from inner to outer)
+    // 2. event capturing: when an event occurs on an element, it first runs the handlers on the root of the document, then on its child, then all the way down to the target element. (from outer to inner)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        // prevent the default action of the event (in this case, prevent the link from being followed)
+        console.log('Google link clicked, but default action prevented!');
+        console.log('Google clicked, but default action prevented!');
+        e.preventDefault();
+    });
+    </script>
+  </html>
