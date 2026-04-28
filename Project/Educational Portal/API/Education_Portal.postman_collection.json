@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "0c0579bb-0cff-4bcd-8c05-9455e7d91006",
+		"name": "Education_Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50701445",
+		"_collection_link": "https://vaishnavgoutam01-963455.postman.co/workspace/G-V's-Workspace~e0267ee8-3185-455c-89e1-66b700e703c9/collection/50701445-0c0579bb-0cff-4bcd-8c05-9455e7d91006?action=share&source=collection_link&creator=50701445"
+	},
+	"item": [
+		{
+			"name": "Admin_API",
+			"item": [
+				{
+					"name": "/course/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERAeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseName\":\"ML\",\r\n    \"description\" : \"this is ml course\",\r\n    \"fees\":99,\r\n    \"startDate\":\"2025-11-21\",\r\n    \"endDate\":\"2026-01-11\",\r\n    \"videoExpireDays\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/course/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"course",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/course/all-courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERAeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\":\"2025-11-21\",\r\n    \"endDate\":\"2026-01-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/course/all-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"course",
+								"all-courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/course/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_name\":\"AIML\",\r\n    \"description\":\"this is aiml course\",\r\n    \"fees\" : 299,\r\n    \"startDate\": \"2026-04-14\",\r\n    \"endDate\": \"2026-05-15\",\r\n    \"video_expire_days\":7,\r\n    \"course_ID\":7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/course/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"course",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/course/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/course/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"course",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/video/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQxMDIzMSwianRpIjoiNWE5NTBhMWUtYTcyMS00MjYxLThlOTctYzA2NzhjNjkxMjMxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluQGdtYWlsLmNvbSIsIm5iZiI6MTc2NjQxMDIzMSwiY3NyZiI6IjNjNTQwMjQ0LWQ0YTYtNDAwNi05NWM4LWNmN2RiMjA2YTdlYiJ9.R7frUvbUq0-u-v2OHMLc5ZDjphjpkkgJt0LwJTc5ZpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_ID\":3,\r\n    \"title\":\"Intro part 2\",\r\n    \"description\": \"Intro to java part2\",\r\n    \"url\": \"https://dummy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.18.3.225:4000/video/add",
+							"protocol": "http",
+							"host": [
+								"172",
+								"18",
+								"3",
+								"225"
+							],
+							"port": "4000",
+							"path": [
+								"video",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/video/all-videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ3MTM1MiwianRpIjoiYjliNzY5YWUtMWYwYy00YTgzLWE2YzItMTEyNGU2YTAxYmE1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDcxMzUyLCJjc3JmIjoiNGY4NmNlZWYtMTc4Ni00ZDcxLWJmYTQtMWEzNGY3NTU4ODIyIn0.7_Nzs-YcT0oqCCv6xWce-hFKi7rBSvaQ_I0y11aEcFo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_ID\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/video/all-videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"video",
+								"all-videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/video/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_ID\":3,\r\n    \"title\":\"Intro to java\",\r\n    \"description\":\"first video is Introduction\",\r\n    \"url\":\"https://youtu.be/mG4NLNZ37y4?si=cuAcsU2qliz3iHCa\",\r\n    \"video_ID\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/video/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"video",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/video/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"video_ID\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/video/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"video",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/admin/enrolled-students",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ3MTM1MiwianRpIjoiYjliNzY5YWUtMWYwYy00YTgzLWE2YzItMTEyNGU2YTAxYmE1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDcxMzUyLCJjc3JmIjoiNGY4NmNlZWYtMTc4Ni00ZDcxLWJmYTQtMWEzNGY3NTU4ODIyIn0.7_Nzs-YcT0oqCCv6xWce-hFKi7rBSvaQ_I0y11aEcFo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_ID\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/admin/enrolled-students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"admin",
+								"enrolled-students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Common_API",
+			"item": [
+				{
+					"name": "/auth/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"g@gmail.com\",\r\n    \"password\": \"g123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.18.3.225:4000/auth/login",
+							"protocol": "http",
+							"host": [
+								"172",
+								"18",
+								"3",
+								"225"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/signup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/course/all-active-courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.18.3.225:4000/course/all-active-courses",
+							"protocol": "http",
+							"host": [
+								"172",
+								"18",
+								"3",
+								"225"
+							],
+							"port": "4000",
+							"path": [
+								"course",
+								"all-active-courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "/student/changepassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2NjQ3MywianRpIjoiMGJiZTFkMDktNjUwOS00YTBiLTg4YzUtMDNiYTIyYjYxY2VhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFtaXRAZ21haWwuY29tIiwibmJmIjoxNzY2NDY2NDczLCJjc3JmIjoiZDYzNjM3MzAtNjIyOC00NzkyLWJlMjgtYmNmODNmZWNlMjY5In0.-PiZNd78eBEYa5Y9JfChY2gaKWCQh-0QaN0Q28SQLc4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"amit@gmail.com\",\r\n    \"old_password\":\"Amit123\",\r\n    \"new_password\":\"Amit321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/students/student/changepassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"students",
+								"student",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/student/register-to-course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ3MTg0OSwianRpIjoiNTQ2MzVlZDAtZDE0MC00ODQzLWEzMTgtMWI1OTA0ODljMzlmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFtaXRAZ21haWwuY29tIiwibmJmIjoxNzY2NDcxODQ5LCJjc3JmIjoiYmZmM2EzNGMtMGM2OS00NjZkLWFiNWEtNzYyMjk3OTIxYjVlIn0.r2VAwsKU7HpNGnNL-7JudWcyX5AFN6v3QcmW99BXr58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"JAVA\",\r\n    \"email\":\"amit@gmail.com\",\r\n    \"course_ID\":3,\r\n    \"mobile_no\":\"6564564454\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/students/student/register-to-course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"students",
+								"student",
+								"register-to-course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/student/my-coursewith-videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mahesh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/students/student/my-coursewith-videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"students",
+								"student",
+								"my-coursewith-videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/student/my-courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERAeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2NjQ2MjU5NSwianRpIjoiYjliM2IyMDUtYzA2YS00MDE0LWIxZGUtMjA1NGU3ZTJjZTA5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImdAZ21haWwuY29tIiwibmJmIjoxNzY2NDYyNTk1LCJjc3JmIjoiODhkOGMyY2YtY2U2Ny00YTEzLWFmYzItNGUzYjY2MzkyYmVlIiwiZXhwIjoxNzY2NDYzNDk1fQ.cw4cXJCQsLDcF5aAyARBmm8Yy4pgGJQEr9X3Bj-HERA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mahesh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/students/student/my-courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"students",
+								"student",
+								"my-courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

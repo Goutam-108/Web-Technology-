@@ -1,0 +1,24 @@
+1.package.json is configuration file having info. about your project, nut packagelog.json
+2.Angular.json is a project configuration file
+3.style.css - is used to creatre global css project
+4.gitignore - version controll file
+5. editconfig - editor/vscode setting
+6.index.html - main html file
+7.main.ts - entry point of the app
+8.app.config.ts - app configuration file
+
+components is a UI block of structure 
+when we create a component it creates a 4 file (html, css, typescript and specs.ts)
+to create a component command is - ng generate component comName
+
+their are 2 types of databinding
+    1.One way:      2.Two way
+interpolation - {{value}}
+property - [property] = "value"
+
+
+data binding means connect UI to code.
+
+
+Activity-----
+how we can use loops, switch cases and if else block in angular

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+venv/
+.env/
+Educational Portal/API/Education_Portal.postman_collection.json

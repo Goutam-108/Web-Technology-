@@ -29,3 +29,4 @@ fetch("https://jsonplaceholder.typicode.com/users")
 //why do we use response .json
 //diff. then/catch and  async/await
 //what is promise chain
+

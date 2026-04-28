@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">Student Management</a>
+  </div>
+  
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a routerLink="/" routerLinkActive="active-link">Home</a></li>
+    <li><a routerLink="/Contact" routerLinkActive="active-link">Contact</a></li>
+    <li><a routerLink="/Add_Student" routerLinkActive="active-link">Add Student</a></li>
+    <li><a routerLink="/Student_List" routerLinkActive="active-link">Student List</a></li>
+  </ul>
+  
+  <div class="menu-toggle" (click)="toggleMenu()">
+    ☰
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
