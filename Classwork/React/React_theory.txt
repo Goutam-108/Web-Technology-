@@ -1,0 +1,47 @@
+React is an js library developed by meta , to bulid fast and interactive inteface
+activtiy 1:
+diff betn React and Angular
+
+React is single page application
+
+why doe we use react :
+problem with js full page relode ,complex dom manipulation and hard to manage larger apllication
+
+after react updates only required part with react uses reauable component
+
+spa : single page application
+if reload the changes can be made instantly
+
+virtual DOM :
+react creates the copy of real DOM is called vitual dom
+when data changes react update virtual dom
+update only changed the part in real dom
+result :- high performance
+
+tools:
+npm node js 
+editor vs code
+
+vite is fast bulid tool 
+npm node packge manager
+
+index.html is entry html file 
+app.jsx root component
+main.jsx reuasble react part
+
+jsx js+html
+
+it allows us to write html code inside the js code
+
+const element = <h1>welcome</h1>
+
+rules:
+must return single parent
+use scope bracket for 
+
+component:
+component is a heart of react
+two types:
+fuctional and class component
+
+functional component:

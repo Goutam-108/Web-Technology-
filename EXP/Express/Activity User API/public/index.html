@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User API Project</title>
+</head>
+<body>
+
+<h2>Register User</h2>
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+<button onclick="register()">Register</button>
+
+<h2>Login</h2>
+<input id="loginEmail" placeholder="Email">
+<input id="loginPassword" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+
+<h2>Users</h2>
+<ul id="list"></ul>
+
+<script>
+async function loadUsers() {
+  const res = await fetch('/users')
+  const users = await res.json()
+
+  const list = document.getElementById('list')
+  list.innerHTML = ''
+
+  users.forEach(u => {
+    const li = document.createElement('li')
+    li.innerHTML = `
+      ${u.name} (${u.email})
+      <button onclick="deleteUser(${u.id})">Delete</button>
+    `
+    list.appendChild(li)
+  })
+}
+
+async function register() {
+  const name = document.getElementById('name').value
+  const email = document.getElementById('email').value
+  const password = document.getElementById('password').value
+
+  await fetch('/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password })
+  })
+
+  alert("User Registered")
+  loadUsers()
+}
+
+async function login() {
+  const email = document.getElementById('loginEmail').value
+  const password = document.getElementById('loginPassword').value
+
+  const res = await fetch('/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  })
+
+  const data = await res.json()
+  alert(data.message)
+}
+
+async function deleteUser(id) {
+  await fetch(`/users/${id}`, { method: 'DELETE' })
+  loadUsers()
+}
+
+loadUsers()
+</script>
+
+</body>
+</html>

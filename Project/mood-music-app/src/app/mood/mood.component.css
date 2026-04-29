@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.happy {
+  background: #fff3b0;
+}
+
+.sad {
+  background: #cdb4db;
+}
+
+.focus {
+  background: #bde0fe;
+}
+
+.energetic {
+  background: #ffadad;
+}
