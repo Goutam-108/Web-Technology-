@@ -9,8 +9,8 @@ app.use(express.static("public"));
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Spb@0609",
-    database: "studentdb"
+    password: "Goutam@#4455",
+    database: "dktedb"
 });
 
 db.connect((err) => {

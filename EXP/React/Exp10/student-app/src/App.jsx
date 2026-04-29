@@ -9,16 +9,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   const students = [
-    {name:'Swarup',age: 22, course: '.Net'},
-    {name:'Aditya',age: 22, course: 'MERN'},
-    {name:'Atharva',age: 22, course: 'GenAI'},
+    {name:'Goutam',age: 22, course: '.Net'},
+    {name:'Shivtej',age: 22, course: 'MERN'},
+    {name:'jay',age: 22, course: 'GenAI'},
     {name:'Om',age: 22, course: 'CyberSecurity'},
     {name:'Shivtej',age: 22, course: 'DataScience'},
     {name:'Ram',age: 22, course: 'MachineLearning'},
     {name:'Sham',age: 22, course: 'CloudComputing'},
-    {name:'Swarupanand',age: 22, course: 'AI'},
+    {name:'Om',age: 22, course: 'AI'},
     {name:'Omkar',age: 22, course: 'Python'},
-    {name:'Arth',age: 22, course: 'Java'},
+    {name:'yo',age: 22, course: 'Java'},
   ];
 
   const showMessage = () => {

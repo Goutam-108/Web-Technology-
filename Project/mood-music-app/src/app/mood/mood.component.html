@@ -1,0 +1,20 @@
+<div class="container" [ngClass]="selectedMood">
+
+  <div class="buttons">
+    <button (click)="setMood('happy')">😊 Happy</button>
+    <button (click)="setMood('sad')">😢 Sad</button>
+    <button (click)="setMood('focus')">🧠 Focus</button>
+    <button (click)="setMood('energetic')">⚡ Energetic</button>
+  </div>
+
+  <div *ngIf="selectedMood">
+    <h2>{{ selectedMood }}</h2>
+
+    <ul>
+      <li *ngFor="let song of getSongs()">
+        🎵 {{ song.title }} - {{ song.artist }}
+      </li>
+    </ul>
+  </div>
+
+</div>

@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "StudentManagement": {
+    "mood-music-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "StudentManagement:build:production"
+              "buildTarget": "mood-music-app:build:production"
             },
             "development": {
-              "buildTarget": "StudentManagement:build:development"
+              "buildTarget": "mood-music-app:build:development"
             }
           },
           "defaultConfiguration": "development"
